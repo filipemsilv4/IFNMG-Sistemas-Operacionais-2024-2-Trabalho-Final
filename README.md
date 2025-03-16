@@ -225,3 +225,31 @@ std::string Huffman::decode(const std::string &encodedData, Node* root) {
 }
 ```
 
+## Testando o programa automaticamente
+
+Para facilitar a validação da compressão e descompressão, há um script chamado `test_huffman.py` que gera casos de teste automaticamente.  
+
+### Como usar o script de testes  
+
+1. Certifique-se de que o executável `huffman` está no mesmo diretório que o script.
+2. Execute o script com o comando:
+
+   ```bash
+   python3 test_huffman.py
+   ```
+
+3. O script irá:
+   - Gerar 10 arquivos de teste aleatórios com tamanhos entre 256 bytes e 8 MB.
+   - Comprimir e descomprimir cada arquivo usando `huffman`.
+   - Verificar se os arquivos descomprimidos são idênticos aos originais.
+   - Exibir os resultados de cada teste no formato:
+
+     ```
+     Teste  1 | Original:   1024 bytes | Comprimido:    512 bytes | ✅
+     Teste  2 | Original:  524288 bytes | Comprimido:  200000 bytes | ✅
+     ```
+
+   - Perguntar se deseja gerar mais 10 casos ou encerrar e apagar todos os arquivos criados.
+
+4. Para encerrar e excluir todos os arquivos temporários, digite `E` quando o script perguntar.
+
