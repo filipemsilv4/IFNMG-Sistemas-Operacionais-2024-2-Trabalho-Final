@@ -1,0 +1,1 @@
+# IFNMG-Sistemas-Operacionais-2024-2-Trabalho-Final
